@@ -43,6 +43,9 @@ python src/validate_on_lfw.py <数据集> <模型:20180402-114759>  --distance_m
 ### detect_face
 `detect_face` 检测图像中的面部，并返回边界框和点。  
 ## 问题
+### 使用问题
+- `align_dataset_mtcnn` 对其人脸 `gallery` 少了96(245-378)个
+- `align_dataset_mtcnn` 对其人脸 `probe` 少了206(2642-2438)个
 ### Q1 import cv2
 缺少软件包安装如下：  
 `apt-get install libsm6`  
