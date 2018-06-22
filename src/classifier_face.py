@@ -3,9 +3,9 @@ import numpy as np
 import os
 import shutil
 
-ORIGIN_DIR = r'D:\Documents\smartcity\dataset\face_a\train'
-TARGET_DIR = r'D:\Documents\smartcity\dataset\face\train'
-CSV_FILE = r'D:\Documents\smartcity\dataset\face_a\train.csv'
+ORIGIN_DIR = r'D:\Documents\smartcity\dataset\face_a\test_a\gallery'
+TARGET_DIR = r'D:\Documents\smartcity\dataset\face\test'
+CSV_FILE = r'D:\Documents\smartcity\dataset\face_a\test_a_gallery.csv'
 
 
 read_csv = pd.read_csv(CSV_FILE, header=None)
@@ -20,3 +20,4 @@ for i in np.arange(len(read_csv)):
     figure_path_original = os.path.join(ORIGIN_DIR, read_csv[0][i])
     shutil.copy(figure_path_original, figure_path_new)
 
+print("DONE！")

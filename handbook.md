@@ -22,7 +22,12 @@ python3 src/validate_on_lfw.py \
 ### 训练自己的图片
 训练：
 ````
- python src/classifier.py TRAIN <数据集> <预模型:20180402-114759.pb> <保存模型:face_classifier.pkl> --batch_size 1000 --min_nrof_images_per_class 40 --nrof_train_images_per_class 35 --use_split_dataset
+python src/classifier.py TRAIN <数据集> <预模型:20180402-114759.pb> <保存模型:face_classifier.pkl> --batch_size 1000 
+````
+
+### 测试自己的图片
+````
+python src/classifier.py CLASSIFY <数据集> <预模型:20180402-114759.pb> <保存模型:face_classifier.pkl> --batch_size 1000
 ````
 
 ### LFW 数据集测试
