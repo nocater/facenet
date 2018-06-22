@@ -17,7 +17,19 @@ python3 src/validate_on_lfw.py \
 --subtract_mean \
 --use_fixed_image_standardization
 ```
-## 代码说明
+## 代码使用说明
+
+### 训练自己的图片
+训练：
+````
+ python src/classifier.py TRAIN <数据集> <预模型:20180402-114759.pb> <保存模型:face_classifier.pkl> --batch_size 1000 --min_nrof_images_per_class 40 --nrof_train_images_per_class 35 --use_split_dataset
+````
+
+### LFW 数据集测试
+````
+python src/validate_on_lfw.py <数据集> <模型:20180402-114759>  --distance_metric 1 --use_flipped_images --subtract_mean --use_fixed_image_standardization
+````
+
 ### facenet
 `get_dataset`   
 获取数据集，会自动替换参数中`~ ~user`为路径  
